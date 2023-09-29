@@ -1,6 +1,6 @@
 logh = document.getElementById("longitudeGoHere")
 // lagh = document.getElementById("latitudeGoHere")
-fetch('http://api.open-notify.org/iss-now.json')
+fetch('https://api.wheretheiss.at/v1/satellites/25544')
   .then(response => {
     if (response.ok) {
       return response.json(); // Parse the response data as JSON
@@ -10,7 +10,7 @@ fetch('http://api.open-notify.org/iss-now.json')
   })
   .then(data => {
     // Process the response data here
-    logh.innerHTML="Longitude: "+data["iss_position"]["longitude"]+"; Latitude: " + data["iss_position"]["latitude"];
+    logh.innerHTML="Longitude: "+data["longitude"]+"; Latitude: " + data["latitude"];
   })
   .catch(error => {
     // Handle any errors here
