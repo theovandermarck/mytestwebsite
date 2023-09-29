@@ -1,5 +1,7 @@
 body {
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Helvetica', Times, serif;
+    text-align: center;
+    background-color: rgb(120, 120, 255);
 }
 
 .centered {
